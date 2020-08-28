@@ -1,0 +1,30 @@
+body{
+	background-color: #add8e6;
+}
+
+h1{
+	color:red;
+	font-size: 80%;
+	font-family: Verdana, courier;
+}
+
+p{
+	/*color: rgba(200, 10, 120, .8);*/
+	font-family: "Comic Sans MS";
+	border-left: 1px solid #333;
+	border-top: 3px dashed yellow;
+	border-right: 5px double rgb(255, 0, 0);
+	border-bottom: 2px dotted purple;
+	padding: 30px 50px 10px 20px;
+	margin: 20px 35px 47.5px 10px;
+}
+
+/*Class*/
+.vermelho{
+	color: red;
+}
+
+/*Id*/
+#azul{
+	color: blue;
+}

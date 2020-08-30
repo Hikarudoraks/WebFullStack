@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<!-- 4) Use a função para mostrar, "Olá João" -->
+	</head>
+	<body>
+
+		<p id="nome">O resultado será mostrado aqui.</p>
+
+		<script>
+			function minhaFuncao(nome) {
+			    return "Olá " + nome;
+			}
+
+			document.getElementById('nome').innerHTML = minhaFuncao("João");
+		</script>
+
+	</body>
+</html>

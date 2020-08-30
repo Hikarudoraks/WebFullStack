@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <!-- 12) Crie as validações do formulário abaixo, e verifique se o usuário é maior de idade: -->
+    <style type="text/css">
+       label{
+        width: 100%;
+        padding: 5px;
+       }
+       input {
+        padding: 5px;
+       }
+       div {
+        margin-bottom: 10px;
+       }
+    </style>
+  </head>
+  <body>
+
+    <form name="formularioCadastro" action="/action_page.php" onsubmit="return validateForm()" method="post">
+
+      <label>Name:<label>
+      <div><input type="text" name="nome" /></div>
+
+      <label>Idade:<label>
+      <div><input type="text" name="idade" /></div>
+
+      <label>E-mail:<label>
+      <div><input type="email" name="email" /></div>
+
+      <label>Telefone:<label>
+      <div><input type="text" name="telefone" /></div>
+
+      <input type="submit" value="Cadastrar">
+
+    </form>
+
+    <script>
+       function validateForm() {
+
+           var nome = document.forms["formularioCadastro"]["nome"].value;
+           var idade = document.forms["formularioCadastro"]["idade"].value;
+           var email = document.forms["formularioCadastro"]["email"].value;
+           var telefone = document.forms["formularioCadastro"]["telefone"].value;
+
+           if(nome == ""){
+              alert("Preencha seu nome!");
+              return false;
+           }
+           if(idade == ""){
+              alert("Preencha sua idade!");
+              return false;
+           }else if(isNaN(idade)){
+              alert("Idade inválidade");
+              return false; 
+           }else if(idade < 18){
+              alert("Você precisa ter 18 anos!");
+              return false;
+           }
+           if(email == ""){
+              alert("Preencha seu E-mail!");
+              return false;
+           }
+           if(telefone == ""){
+              alert("Preencha seu telefone!");
+              return false;
+           }else if(isNaN(telefone)){
+              alert("Telefone inválido!");
+              return false;
+           }
+
+
+       }
+    </script>
+
+  </body>
+</html>

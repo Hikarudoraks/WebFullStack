@@ -1,0 +1,11 @@
+main .banner{
+	background-image: url(../../img/banner.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 480px;
+}
+
+main .titulo{
+	padding-top: 200px;
+	text-shadow: 2px 2px 5px #333;
+}

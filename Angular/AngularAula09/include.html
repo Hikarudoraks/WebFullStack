@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<title>And Marvel | Includes</title>
+	</head>
+	<body>
+
+		<div ng-include="https://www.gov.br/pt-br"></div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+		<script type="text/javascript">
+			var app = angular.module("app", []);
+
+			app.config(function($sceDelegateProvider){
+				$sceDelegateProvider.resourceUrlWhiteList([
+					"https://www.gov.br/pt-br"
+					]);
+			});
+		</script>
+	</body>
+</html>

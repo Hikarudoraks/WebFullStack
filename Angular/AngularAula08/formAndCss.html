@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app>
+	<head>
+		<meta charset="utf-8">
+		<title>And Marvel</title>
+		<style type="text/css">
+			form.ng-pristine{
+				background-color: lightblue;
+			}
+			form.ng-dirty{
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+
+		<form name="myForm">
+			<input type="email" name="nome" ng-model="myInput" required>
+		</form>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+	</body>
+</html>

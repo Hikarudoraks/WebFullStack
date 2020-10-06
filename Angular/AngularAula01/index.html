@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Angular Aula 01</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+	</head>
+	<body>
+
+		<div ng-app="myApp" ng-controller="myCtrl" ng-init="bgColor='blue'; quantidade = 2; valor = 10; expressao = 0; points = [10,20,5,2,49]">
+			<!-- Parte 1 -->
+			<p>Nome: <input type="text" name="name" ng-model="name"></p>
+			<p ng-bind="name"></p>
+
+			<!-- Parte 2 -->
+			<p>Expressão: {{ expressao = quantidade * valor}}</p>
+
+			<!-- Parte 3 -->
+			<p>
+				<input style="background-color: {{bgColor}}; color: white;">
+			</p>
+
+			<!-- Parte 4 -->
+			<p>Valor de points na terceira posição é: {{ points[2] }}</p>
+
+			<!-- Parte 5 -->
+			<p>{{ firstName + ' ' + lastName }}</p>
+		</div>
+		<script type="text/javascript">
+			var app = angular.module('myApp', []);
+
+			app.controller("myCtrl", function($scope){
+				$scope.firstName = 'Ricardo';
+				$scope.lastName = 'Alexandre';
+			});
+		</script>
+	</body>
+</html>

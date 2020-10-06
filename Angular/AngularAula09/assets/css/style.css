@@ -1,0 +1,223 @@
+@font-face{
+	font-family: Banana;
+	src: url(../libs/fonts/BANANASP.TTF);
+}
+
+@font-face{
+	font-family: Tomate;
+	src: url("../libs/fonts/TOMATOES Personal Use.ttf");
+}
+
+@font-face{
+	font-family: Main;
+	src: url("../libs/fonts/TheMainEventDEMO.ttf");
+}
+
+body{
+	margin: 0;
+}
+
+ul{
+	margin-top: 25px;
+	position: absolute;
+	right: 250px;
+}
+
+ul, .links, li{
+	display: inline;
+}
+
+.navbar ul li a{
+	padding: 10px;
+	text-decoration: none;
+	color: #000;
+}
+
+.logo{
+	margin-top: 25px;
+	padding-right: 600px;
+	display: inline;
+	left: 250px;
+}
+
+.logo a{
+	padding: 10px;
+	text-decoration: none;
+	color: #000;
+}
+
+.navbar{
+	font-size: 15pt;
+	background-color: #333;
+	height: 80px;
+	width: 100%;
+}
+
+.center{
+	text-align: center;
+	margin: 50px 250px;
+}
+
+.template{
+	margin: 20px 250px;
+	text-align: center;
+	position: relative;
+}
+
+.template .one{
+	border-style: solid;
+	border-color: lightblue;
+}
+.template .two{	
+	border-style: solid;
+	border-color: yellow;
+}
+
+.template .three{
+	border-style: solid;
+	border-color: red;
+}
+
+.template .main{
+	background-color: lightblue;
+	padding-top: 30px;
+	font-size: 60pt;
+	margin-top: 0;
+	width: 100%;
+	height: 100px;
+	font-family: "Main";
+}
+
+.template h2{
+	margin-bottom: 30px;
+}
+
+.template .img-main{
+	margin-left: -0px!important;
+}
+
+.template .banana{
+	background-color: yellow;
+	padding-top: 50px;
+	font-size: 45pt;
+	margin-top: 0;
+	width: 100%;
+	height: 100px;
+	font-family: "Banana";
+}
+
+.template .tomato{
+	background-color: red;
+	padding-top: 20px;
+	font-size: 30pt;
+	margin-top: 0px;
+	width: 100%;
+	height: 100px;
+	font-family: "Tomate";
+}
+
+.template .content{
+	margin: 0 50px;
+	text-align: justify; 
+	font-size: 15pt;
+}
+
+.template .content-img{
+	margin: 20px 125px;
+}
+
+@media only screen and (max-width: 1200px){
+	.logo{
+		margin-top: 15px;	
+		padding-right: 300px;
+	}
+
+	ul{
+		right: 250px;
+	}
+}
+
+@media only screen and (max-width: 1000px){
+	.logo{
+		margin-top: 15px;	
+		padding-right: 200px;
+	}
+
+	ul{
+		right: 250px;
+	}
+}
+
+@media only screen and (max-width: 900px){
+	.center{
+		text-align: center;
+		margin: 50px 50px;
+	}
+
+	.template{
+		margin: 20px 50px;
+		text-align: center;
+	}
+
+	.logo{
+		margin-top: 15px;	
+		padding-right: 350px!important;
+	}
+
+	ul{
+		right: 60px!important;
+	}
+}
+
+@media only screen and (max-width: 700px){
+	.center{
+		text-align: center;
+		margin: 25px 25px;
+	}
+
+	.template{
+		margin: 20px 25px;
+		text-align: center;
+	}
+
+	.logo{
+		margin-top: 15px;	
+		padding-right: 270px!important;
+	}
+
+	ul{
+		right: 50px!important;
+	}
+}
+
+@media only screen and (max-width: 620px){
+	.logo{
+		margin-top: 15px;	
+		padding-right: 170px!important;
+	}
+
+	ul{
+		right: 50px!important;
+	}
+}
+
+@media only screen and (max-width: 500px){
+	.center{
+		text-align: center;
+		margin: 10px 10px!important;
+	}
+
+	.template{
+		margin: 10px 10px!important;
+		text-align: center;
+	}
+
+	.logo{
+		margin-top: 15px;	
+		padding-right: 80px!important;
+	}
+
+	ul{
+		right: 50px!important;
+	}
+}

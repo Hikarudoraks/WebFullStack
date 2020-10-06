@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		<title>Angular</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	</head>
+	<body ng-app="app">
+
+		<div class="navbar">
+			<ul>
+				<div class="logo">
+					<li><a href="#/!">Main</a></li>
+				</div>
+				<div class="links">
+					<li><a href="#!banana">Banana</a></li>
+					<li><a href="#!tomato">Tomate</a></li>
+				</div>
+			</ul>
+		</div>
+
+		<div class="center">
+			<p>Clique nesse link para mudar o conteudo</p>
+			<p>O HTML mostrado na diretiva ng-view é gravado na propriedade template do método $routeProvider .when.</p>
+		</div>
+
+		<div ng-view class="template"></div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.js"></script>
+		<script type="text/javascript">
+			var app = angular.module("app", ['ngRoute']);
+			app.config(function($routeProvider){
+				$routeProvider
+				.when("/",{
+					template: "<style>.navbar{background-color:lightblue;}.footer{background-color:lightblue}</style><div class='one'><h1 class='main'>Main</h1><h2>Conheça a nova tag MAIN do HTML.</h2><p class='content'>A tag MAIN tem uma única função semântica: definir o conteúdo principal da página ou da aplicação. Ele representa o conteúdo mais importante da página, que está diretamente relacionado ao tópico central do documento ou a funcionalidade principal de uma aplicação.<br>&nbsp;&nbsp;&nbsp;&nbsp;O MAIN não pode ser filho de elementos como aside, article, footer, header ou nav. A tag MAIN não é um elemento de seção de conteúdo e ele não afeta o fluxo do documento. Ou seja, ele não tem margin, padding, borda ou qualquer outro valor padrão.É muito recomendado que utilizemos o ARIA role=”main” para que usar agents implementem esse mapeamento.Um detalhe importante: você não pode colocar mais do que UMA tag main no seu documento. Claro, por motivos óbvios.</p><img class='content-img img-main' src='assets/img/main.png' width='100%'></div>"
+				})
+				.when("/banana",{
+					template: "<style>.navbar{background-color:yellow;}.footer{background-color:yellow;}</style><div class='two'><h1 class='banana'>Banana</h1><p class='content'>Os cachos de bananas, pendentes na extremidade do falso caule da bananeira, podem ter 5 a 20 pencas e podem pesar de 30 a 50 kg. Cada banana pesa, em média, 125g, com uma composição de 75% de água e 25% de matéria seca. Bananas são fonte apreciável de vitamina A, vitamina C, fibras e potássio.</p><img class='content-img' src='assets/img/banana.png' width='20%'></div>"
+				})
+				.when("/tomato",{
+					template: "<style>.navbar{background-color:red}.footer{background-color:red}</style><div class='three'><h1 class='tomato'>Tomate</h1><p class='content'>O consumo do tomate é recomendado pelos nutricionistas por ser um alimento rico em licopeno (média de 3,31 miligramas em cem gramas), vitaminas do complexo A e complexo B e minerais importantes, como o fósforo e o potássio, além de ácido fólico, cálcio e frutose. Quanto mais maduro, maior a concentração desses nutrientes.O tomate é composto principalmente de água, possuindo, aproximadamente, catorze calorias em cem gramas, somente. Alguns estudos comprovam sua influência positiva no tratamento de câncer, pois o licopeno, pigmento que dá cor ao tomate, é considerado eficiente na prevenção do câncer de próstata e no fortalecimento do sistema imunológico.</p><img class='content-img' src='assets/img/Tomate.png' width='30%'></div>"
+				});
+			});
+		</script>
+	</body>
+</html>
